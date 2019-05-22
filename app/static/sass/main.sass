@@ -1,0 +1,234 @@
+@import "libs.sass"
+body 
+  font-family: $mainFont
+  .page
+    .header
+      padding-top: 24px
+      background-image: url("../img/main-bg.png")
+      nav
+        width: 100%
+        display: flex
+        align-items: baseline
+        padding: 0
+        
+        .navbar-collapse
+          ul
+            li
+              margin-left: 30px
+              a
+                font-size: 16px
+                color: #fff
+            .dropdown-menu
+              background-color: #19263f
+
+      .banner
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        .banner__title
+          max-width: 380px
+          color: #fff
+          text-align: center
+          font-family: $titleFont
+          font-style: normal
+          font-weight: 300
+          font-size: 48px
+          margin-top: 80px
+          margin-bottom: 84px
+        .banner__text
+          max-width: 880px
+          font-style: normal
+          font-size: 18px
+          line-height: 23px
+          text-align: center
+          color: #fff
+          padding-bottom: 99px
+    .content
+      .about
+        margin-top: 80px
+        .about__title
+          text-align: center
+          font-weight: bold
+          font-size: 18px
+          font-family: $titleFont
+          margin-bottom: 32px
+        .about__item
+          min-height: 320px
+          position: relative
+          background-color: #FAFAFA
+          padding: 40px 35px 30px
+          .about__img
+            height: 64px
+            display: block
+            margin: 0 auto
+          .title
+            width: 100%
+            font-weight: bold
+            font-size: 18px 
+            text-align: center
+            margin-top: 25px
+            margin-bottom: 11px
+          .text
+            text-align: start
+          .link
+            position: absolute
+            bottom: 10px
+            left: 40%     
+      .products
+        padding: 80px 0
+        .products__title
+          text-align: center
+          font-weight: bold
+          font-size: 18px
+          font-family: $titleFont
+          margin-bottom: 30px
+        .products__description
+          margin-bottom: 58px
+        .products__item
+          .products__img
+            height: 62px
+            display: block
+            margin: 0 auto
+          .title
+            width: 100%
+            font-weight: bold
+            font-size: 18px 
+            text-align: center
+            font-family: $titleFont
+            margin-top: 25px
+            margin-bottom: 11px
+        .products__btn
+          border: 1px solid #85B657
+          box-sizing: border-box
+          text-decoration: none
+          color: #000
+          padding: 18px 50px
+          border-radius: 4px
+          &:hover
+            background-color: #85B657
+            color: #fff
+      .recomendation
+        .recomendation__title
+          text-align: center
+          font-weight: bold
+          font-size: 18px
+          font-family: $titleFont
+          margin-bottom: 30px
+        .recomendation__description
+          span
+            display: inline-block
+            margin-bottom: 20px
+        .recomendation__img
+          margin-top: 30px
+          margin-bottom: 115px
+    .footer
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding-top: 40px
+      padding-bottom: 54px
+      background-color: #19263F
+      .footer__menu
+        display: flex
+        li
+          margin-right: 25px
+          &:last-child
+            margin-right: 0
+          a
+            font-size: 16px
+            cursor: pointer
+            color: #fff
+      .footer__social
+        display: flex
+        justify-content: center
+        margin-top: 26px
+        margin-bottom: 29px
+        a
+          margin-right: 30px
+          &:last-child
+            margin-right: 0
+          span
+            display: block
+            content: ""
+            position: relative
+            width: 50px
+            height: 50px
+            background: rgba(255, 255, 255, 0.3)
+            border-radius: 50%
+            &:hover
+              background-color: #85B657
+          .fb
+            &::before
+              display: block
+              content: ""
+              position: relative
+              top: 10px
+              left: 16px
+              width: 17px
+              height: 31px
+              background-image: url("../../static/img/fb.png")
+          .tw
+            &::before
+              display: block
+              content: ""
+              position: relative
+              top: 12px
+              left: 11px
+              width: 31px
+              height: 27px
+              background-image: url("../../static/img/tw.png")
+          .inst
+            &::before
+              display: block
+              content: ""
+              position: absolute
+              bottom: 9px
+              left: 9px
+              width: 31px
+              height: 32px
+              background-image: url("../../static/img/inst.png")
+      .footer__cprt
+        font-size: 15px
+        color: #fff        
+@media (max-width : 480px)
+  .header
+    .navbar
+      padding: 0 20px!important
+      .logo
+        width: 200px
+      .navbar-collapse
+        text-align: center
+    .banner
+      .banner__title
+        font-size: 28px!important
+      .banner__text
+        font-size: 14px!important
+  .about
+    .about__item
+      margin-bottom: 20px
+  .products
+    .spc
+      margin-bottom: 0!important
+    .products__item
+      margin-top: 20px
+    .mb-spc
+      padding-top: 50px
+  .footer
+    display: block!important
+    padding-top: 20px!important
+    padding-bottom: 27px!important
+    text-align: center
+    .footer__menu
+      display: block!important
+      li
+        margin-right: 0!important
+  
+@media (max-width : 768px)
+  .navbar
+    .navbar-collapse, .dropdown-menu
+      text-align: center
+  .footer
+    display: flex
+    .footer__menu
+      display: flex
